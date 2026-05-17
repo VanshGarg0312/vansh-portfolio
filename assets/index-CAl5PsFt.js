@@ -35,10 +35,4 @@ Error generating stack: `+e.message+`
         "Internships",
         "Freelance"
     };
-
-    public static void main(String[] args) {
-        Developer dev = new Developer();
-
-        System.out.println(dev.name + " - " + dev.role);
-    }
 }`})]})})]})]})})}function Se(){return(0,b.jsx)(`footer`,{className:`footer`,children:(0,b.jsxs)(`div`,{className:`container footer-inner`,children:[(0,b.jsxs)(`div`,{className:`footer-left`,children:[(0,b.jsxs)(`span`,{className:`footer-logo`,children:[(0,b.jsx)(`span`,{className:`logo-bracket`,children:`[`}),`VG`,(0,b.jsx)(`span`,{className:`logo-bracket`,children:`]`})]}),(0,b.jsx)(`span`,{className:`footer-copy`,children:`© 2025 Vansh Garg. All rights reserved.`})]}),(0,b.jsxs)(`div`,{className:`footer-right`,children:[(0,b.jsx)(`a`,{href:`https://linkedin.com/in/vansh-garg-bilaspur`,target:`_blank`,rel:`noreferrer`,className:`footer-link`,children:`LinkedIn`}),(0,b.jsx)(`a`,{href:`https://github.com/VanshGarg0312`,target:`_blank`,rel:`noreferrer`,className:`footer-link`,children:`GitHub`}),(0,b.jsx)(`a`,{href:`https://leetcode.com/u/vanshgarg0312`,target:`_blank`,rel:`noreferrer`,className:`footer-link`,children:`LeetCode`})]})]})})}function Ce(){let[e,t]=(0,_.useState)(0);return(0,_.useEffect)(()=>{let e=()=>t(window.scrollY);return window.addEventListener(`scroll`,e),()=>window.removeEventListener(`scroll`,e)},[]),(0,b.jsxs)(`div`,{className:`app`,children:[(0,b.jsx)(`div`,{className:`grain-overlay`}),(0,b.jsx)(ee,{scrollY:e}),(0,b.jsx)(S,{}),(0,b.jsx)(te,{}),(0,b.jsx)(re,{}),(0,b.jsx)(he,{}),(0,b.jsx)(ge,{}),(0,b.jsx)(ve,{}),(0,b.jsx)(be,{}),(0,b.jsx)(xe,{}),(0,b.jsx)(Se,{})]})}(0,v.createRoot)(document.getElementById(`root`)).render((0,b.jsx)(_.StrictMode,{children:(0,b.jsx)(Ce,{})}));
