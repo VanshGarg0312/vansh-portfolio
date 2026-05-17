@@ -99,12 +99,6 @@ export default function Contact() {
         "Internships",
         "Freelance"
     };
-
-    public static void main(String[] args) {
-        Developer dev = new Developer();
-
-        System.out.println(dev.name + " - " + dev.role);
-    }
 }`}</pre>
             </div>
           </div>
