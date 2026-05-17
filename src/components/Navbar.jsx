@@ -32,7 +32,7 @@ export default function Navbar({ scrollY }) {
         </ul>
 
         <a
-          href="/resume.pdf"
+          href="/vansh-portfolio/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="nav-cta"
