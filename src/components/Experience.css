@@ -1,0 +1,227 @@
+.experience-section {
+  border-top: 1px solid var(--border);
+  background: var(--bg2);
+}
+
+.exp-timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+/* Timeline Line */
+.timeline-bar {
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 40px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), var(--border));
+}
+
+.exp-item {
+  position: relative;
+  margin-bottom: 48px;
+}
+
+/* Timeline Dots */
+.exp-dot {
+  position: absolute;
+  left: -40px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg2);
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .exp-dot.dim {
+  border-color: var(--border2);
+} */
+
+.dot-inner {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.exp-dot.dim .dot-inner {
+  background: var(--border2);
+}
+
+/* Experience Card */
+.exp-content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 32px;
+}
+
+.exp-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.exp-date {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--text3);
+}
+
+.exp-type {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  /* background: var(--accent-dim); */
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.exp-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.exp-role {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.exp-company {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.company-name {
+  font-size: 14px;
+  color: var(--text2);
+}
+
+.exp-tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.exp-tech {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent);
+  background: var(--accent-dim);
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(232,197,71,0.2);
+}
+
+.exp-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exp-bullets li {
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.7;
+  padding-left: 18px;
+  position: relative;
+}
+
+.exp-bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 12px;
+}
+
+/* Timeline End */
+.timeline-end {
+  position: relative;
+  margin-left: -40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 20px;
+}
+
+.timeline-end-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg2);
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 0;
+}
+
+.timeline-end-dot::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* Upcoming Card */
+.upcoming-card {
+  background: transparent;
+  border: 1px dashed var(--border2);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 32px;
+  flex-wrap: wrap;
+}
+
+.upcoming-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.upcoming-card p {
+  flex: 1;
+  font-size: 13px;
+  color: var(--text3);
+  min-width: 200px;
+}
+
+.upcoming-cta {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--bg);
+  background: var(--accent);
+  padding: 8px 18px;
+  border-radius: 4px;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.upcoming-cta:hover {
+  background: var(--accent2);
+}

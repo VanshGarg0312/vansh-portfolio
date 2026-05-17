@@ -1,0 +1,223 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(232,197,71,0.04) 0%, transparent 70%), var(--bg);
+}
+
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.hero-bg-text {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--serif);
+  font-size: clamp(120px, 20vw, 220px);
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(232, 197, 71, 0.04);
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 100px;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-dim);
+  padding: 5px 12px;
+  border-radius: 100px;
+  border: 1px solid rgba(232, 197, 71, 0.2);
+}
+
+.hero-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--border2);
+}
+
+.hero-location {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text3);
+  letter-spacing: 0.08em;
+}
+
+.hero-name {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--serif);
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 900;
+  line-height: 0.95;
+  margin-bottom: 24px;
+  animation: fadeUp 0.8s ease 0.1s both;
+}
+
+.name-line {
+  display: block;
+}
+
+.accent-line {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.hero-role {
+  font-family: var(--mono);
+  font-size: clamp(12px, 2vw, 14px);
+  letter-spacing: 0.08em;
+  color: var(--text2);
+  margin-bottom: 20px;
+  animation: fadeUp 0.8s ease 0.2s both;
+}
+
+.role-sep {
+  color: var(--accent);
+  margin: 0 8px;
+}
+
+.hero-desc {
+  font-size: 16px;
+  color: var(--text2);
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 40px;
+  animation: fadeUp 0.8s ease 0.3s both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.8s ease 0.4s both;
+}
+
+.btn-primary {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--accent);
+  padding: 14px 28px;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--accent2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232,197,71,0.25);
+}
+
+.btn-outline {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+  padding: 14px 28px;
+  border-radius: 6px;
+  border: 1px solid var(--border2);
+  transition: var(--transition);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.hero-socials {
+  display: flex;
+  gap: 16px;
+  animation: fadeUp 0.8s ease 0.5s both;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--text3);
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  color: var(--accent);
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: fadeUp 1s ease 0.8s both;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+.hero-scroll-hint span {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text3);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .hero-content { padding-top: 80px; }
+  .hero-name { font-size: 3.5rem; }
+  .hero-bg-text { font-size: 100px; }
+}

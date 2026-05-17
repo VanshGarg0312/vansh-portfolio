@@ -1,0 +1,239 @@
+.projects-section {
+  border-top: 1px solid var(--border);
+}
+
+.projects-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.project-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-tab {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  text-align: left;
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-tab::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--p-color);
+  transform: scaleY(0);
+  transition: var(--transition);
+}
+
+.project-tab:hover, .project-tab.active {
+  border-color: var(--border2);
+}
+
+.project-tab.active::before {
+  transform: scaleY(1);
+}
+
+.tab-number {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text3);
+  flex-shrink: 0;
+  letter-spacing: 0.06em;
+}
+
+.project-tab.active .tab-number {
+  color: var(--p-color);
+}
+
+.tab-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tab-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: var(--transition);
+}
+
+.project-tab.active .tab-title, .project-tab:hover .tab-title {
+  color: var(--text);
+}
+
+.tab-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 0.08em;
+}
+
+.project-tab.active .tab-tag {
+  color: var(--p-color);
+}
+
+.tab-arrow {
+  font-size: 14px;
+  color: var(--text3);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: var(--transition);
+}
+
+.project-tab.active .tab-arrow, .project-tab:hover .tab-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--p-color);
+}
+
+/* Detail Panel */
+.project-detail {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px;
+  min-height: 380px;
+}
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.detail-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+.detail-number {
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 900;
+  opacity: 0.2;
+  line-height: 1;
+}
+
+.detail-title {
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.detail-role {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--text3);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.detail-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.detail-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+.bullet-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.detail-tech {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.tech-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text3);
+}
+
+.tech-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tech-chip {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--chip-color, var(--accent));
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border);
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+  .projects-layout {
+    grid-template-columns: 1fr;
+  }
+  .project-tabs {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 4px;
+  }
+  .project-tab {
+    min-width: 240px;
+  }
+}
+
+@media (max-width: 560px) {
+  .project-detail { padding: 24px; }
+  .detail-title { font-size: 1.3rem; }
+}

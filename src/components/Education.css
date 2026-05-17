@@ -1,0 +1,130 @@
+.education-section {
+  border-top: 1px solid var(--border);
+}
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.edu-card {
+  display: grid;
+  grid-template-columns: 140px auto 1fr auto;
+  align-items: center;
+  gap: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  transition: var(--transition);
+}
+
+.edu-card.highlight {
+  border-color: rgba(232,197,71,0.3);
+  background: linear-gradient(135deg, rgba(232,197,71,0.04) 0%, var(--surface) 100%);
+}
+
+.edu-card:hover {
+  border-color: var(--border2);
+  transform: translateX(4px);
+}
+
+.edu-card.highlight:hover {
+  border-color: rgba(232,197,71,0.5);
+}
+
+.edu-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.edu-level {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.edu-year {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text3);
+}
+
+.edu-divider {
+  width: 1px;
+  height: 48px;
+  background: var(--border2);
+  margin: 0 28px;
+}
+
+.edu-main {
+  flex: 1;
+}
+
+.edu-degree {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.edu-institution {
+  font-size: 13px;
+  color: var(--text3);
+}
+
+.edu-score {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  margin-left: 32px;
+}
+
+.score-value {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.score-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .edu-card {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .edu-divider { display: none; }
+
+  .edu-main {
+    grid-column: 1 / -1;
+  }
+
+  .edu-score {
+    align-items: flex-end;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .edu-card {
+    grid-template-columns: 1fr;
+  }
+  .edu-score { align-items: flex-start; }
+}
