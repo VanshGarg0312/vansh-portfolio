@@ -51,7 +51,15 @@ export default function Navbar({ scrollY }) {
             {l.label}
           </a>
         ))}
-        <a href="#contact" className="mobile-cta" onClick={() => setOpen(false)}>Hire Me</a>
+        <a
+          href={`${import.meta.env.BASE_URL}resume.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mobile-cta"
+          onClick={() => setOpen(false)}
+        >
+          Resume
+        </a>
       </div>
     </nav>
   );
